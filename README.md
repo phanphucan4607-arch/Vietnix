@@ -1,44 +1,285 @@
-PHẦN 1: NỀN TẢNG HẠ TẦNG (INFRASTRUCTURE)
+**I - các sản phẩm cơ bản 
 
-Phần này tập trung vào không gian lưu trữ và môi trường vật lý để duy trì sự tồn tại của một website trên internet.
-1. Datacenter (Trung tâm dữ liệu)
-Định nghĩa: Là "Trụ sở" khổng lồ chứa hàng nghìn máy chủ. Đây là môi trường vật lý được thiết kế đặc biệt để bảo vệ máy tính khỏi mọi tác động bên ngoài.
-Các thành phần thiết yếu:
-Nguồn điện: Phải có điện lưới, bộ lưu điện (UPS) và máy phát điện dự phòng để máy chủ không bao giờ tắt.
-Làm mát: Hệ thống máy lạnh công suất lớn giữ nhiệt độ ổn định (20-24°C) để máy không bị quá nhiệt.
-An ninh: Camera 24/7, khóa từ, chống cháy bằng khí (không dùng nước để tránh hỏng thiết bị).
-Tiêu chuẩn: Thường được đánh giá qua các cấp độ (Tier). Tier 3 là tiêu chuẩn phổ biến nhất tại Việt Nam, đảm bảo hoạt động liên tục 99.982%.
-3. Server (Máy chủ vật lý)
-Định nghĩa: Là một chiếc máy tính có cấu hình cực mạnh, được thiết kế để chạy liên tục năm này qua năm khác.
-Vai trò: Là "Cái tủ" chứa toàn bộ mã nguồn, hình ảnh và cơ sở dữ liệu của website.
-Đặc điểm: Không có màn hình hay bàn phím đi kèm như máy tính bàn (PC), mọi thao tác đều thực hiện từ xa qua mạng.
-4. VPS (Virtual Private Server - Máy chủ ảo)
-Định nghĩa: Là một phần của máy chủ vật lý được chia ra bằng công nghệ ảo hóa.
-Đặc điểm: * Mỗi VPS có hệ điều hành, CPU và RAM riêng biệt, không dùng chung với ai.
-Ưu điểm: Bảo mật cao, hiệu suất ổn định, toàn quyền cài đặt phần mềm (như aaPanel).
-Đối tượng: Phù hợp cho website bán hàng, doanh nghiệp hoặc người cần cài đặt ứng dụng riêng.
-5. Hosting (Lưu trữ dùng chung)
-Định nghĩa: Là hình thức chia một máy chủ thành rất nhiều ngăn nhỏ để cho thuê.
-Đặc điểm:
-Nhiều website cùng chạy trên một tài nguyên máy chủ (dùng chung CPU, RAM).
-Ưu điểm: Giá rẻ nhất, dễ sử dụng vì nhà cung cấp đã cài sẵn mọi thứ.
-Hạn chế: Nếu một website trên cùng server bị tấn công hoặc quá tải, website của bạn có thể bị chậm theo.
-Đối tượng: Phù hợp cho blog cá nhân, website giới thiệu nhỏ.
+1. Hosting (Web Hosting / Shared Hosting)
+1.1. Định nghĩa dễ hiểu
 
+Hosting (hay Shared Hosting) là một dịch vụ lưu trữ website trên một máy chủ đã được cấu hình sẵn. Hãy tưởng tượng Máy chủ là một Ký túc xá, và Hosting là một chiếc giường trong căn phòng đó. Bạn chia sẻ không gian chung (điện, nước, hành lang) với những người khác để tiết kiệm chi phí.
+1.2. Các thành phần thông số quan trọng (Cần lưu ý khi mua)
 
-PHẦN 2: PHẦN CỨNG MÁY CHỦ (HARDWARE)
-Phần này giúp bạn hiểu về sức mạnh nội lực bên trong của một Server hoặc VPS.
-1. CPU (Central Processing Unit - Bộ vi xử lý)
-Định nghĩa: Là "Bộ não" trung tâm, nơi tiếp nhận và xử lý mọi yêu cầu (request) từ người dùng gửi đến website.
-Các chỉ số cần lưu ý:
-Số Nhân (Cores/vCPU): Càng nhiều nhân, máy chủ càng làm được nhiều việc cùng lúc. Giống như một siêu thị có nhiều quầy thanh toán thì khách không phải chờ lâu.
-Xung nhịp (Clock Speed - GHz): Tốc độ xử lý của từng nhân. Xung nhịp càng cao, việc xử lý một lệnh phức tạp càng nhanh.
-CPU Máy chủ (Xeon/EPYC): Khác với CPU máy tính thường, CPU server được thiết kế để chạy 24/7 mà không cần tắt máy, chịu được nhiệt độ cao và áp lực công việc liên tục.
-2. RAM (Random Access Memory - Bộ nhớ tạm)
-Định nghĩa: Là "Mặt bàn làm việc" của CPU. Mọi dữ liệu đang xử lý đều phải đặt lên RAM.
-RAM ECC (Error Correction Code): Đây là loại RAM chuyên dụng cho máy chủ.
-Tính năng: Tự động phát hiện và sửa các lỗi dữ liệu phát sinh.
-Lợi ích: Ngăn chặn tình trạng treo máy (crash) hoặc lỗi màn hình xanh, giúp hệ thống hoạt động cực kỳ ổn định.
-Dung lượng RAM: Website càng nặng (như web bán hàng, diễn đàn) thì càng cần nhiều RAM để không bị lag khi có nhiều khách truy cập cùng lúc.
+Khi đọc bảng giá Hosting, bạn cần hiểu các thuật ngữ sau:
 
+    Storage (Dung lượng ổ cứng): Tổng dung lượng bạn được phép lưu trữ (bao gồm code, ảnh, email, database). Hiện nay đa số dùng SSD hoặc NVMe để có tốc độ đọc ghi nhanh nhất.
+
+    Bandwidth (Băng thông): Tổng lượng dữ liệu truyền tải giữa website và người dùng trong 1 tháng.
+
+        Lời khuyên: Nên chọn gói "Unlimited" (Không giới hạn) để tránh web bị sập khi khách truy cập tăng đột biến.
+
+    Addon Domain (Tên miền thêm): Số lượng website tối đa bạn có thể chạy trên cùng một gói hosting.
+
+    Subdomain: Số lượng tên miền phụ (ví dụ: blog.tenmien.com).
+
+    MySQL / MariaDB Database: Số lượng cơ sở dữ liệu bạn có thể tạo (mỗi web WordPress thường cần 1 database).
+
+    FTP Account: Tài khoản để bạn upload dữ liệu từ máy tính lên hosting.
+
+2. VPS (Virtual Private Server - Máy chủ ảo riêng)
+2.1. Khái niệm dễ hiểu
+
+VPS là một phương pháp phân chia một máy chủ vật lý thành nhiều máy chủ ảo. Mặc dù nhiều VPS chạy trên cùng một máy chủ vật lý, nhưng mỗi VPS là một hệ thống hoàn toàn biệt lập, có hệ điều hành riêng, dung lượng lưu trữ riêng và tài nguyên (CPU, RAM) riêng.
+2.2. Các thông số kỹ thuật cốt lõi
+
+    vCPU (Virtual CPU): Số lượng nhân xử lý ảo được cấp phát cho VPS. vCPU càng nhiều thì khả năng tính toán và xử lý các lệnh từ website càng nhanh.
+
+    RAM (Memory): Bộ nhớ tạm của máy chủ ảo. Website chạy mã nguồn nặng (như WordPress nhiều plugin) hoặc có nhiều khách truy cập cùng lúc sẽ cần dung lượng RAM lớn để không bị treo.
+
+    Disk (Ổ cứng): Thường sử dụng công nghệ SSD hoặc NVMe. Ổ cứng không chỉ là nơi lưu dữ liệu mà tốc độ đọc/ghi (I/O) của nó quyết định rất lớn đến tốc độ load trang.
+
+    Quyền Root (Root Access): Đây là quyền quản trị cao nhất. Bạn có thể cài đặt bất kỳ phần mềm nào, chỉnh sửa bất kỳ file hệ thống nào mà không bị nhà cung cấp ngăn cản.
+
+2.3. Ưu điểm nổi bật
+
+    Tài nguyên độc lập: Bạn không phải chia sẻ CPU và RAM với người khác như Hosting. Nếu "hàng xóm" trên cùng server vật lý bị quá tải, VPS của bạn vẫn hoạt động bình thường.
+
+    Bảo mật cao: Nhờ môi trường ảo hóa biệt lập, nguy cơ bị lây nhiễm mã độc giữa các tài khoản trên cùng một server là rất thấp.
+
+    Tự do tùy chỉnh: Bạn có thể cài đặt aaPanel, cPanel hoặc các hệ điều hành Linux/Windows tùy chọn theo nhu cầu công việc.
+
+    Nâng cấp linh hoạt: Khi website phát triển, bạn có thể nâng cấp thêm CPU hoặc RAM chỉ trong vài phút.
+
+2.4. Nhược điểm cần lưu ý
+
+    Đòi hỏi kiến thức kỹ thuật: Vì bạn có toàn quyền quản trị, bạn cũng phải tự chịu trách nhiệm cài đặt, cấu hình bảo mật và xử lý lỗi khi phát sinh.
+
+    Giá thành: Chi phí thuê VPS thường cao hơn so với Hosting truyền thống do tính chất riêng tư và hiệu năng.
+
+    Quản trị rủi ro: Nếu bạn không cài đặt tường lửa hoặc bảo mật tốt, VPS có thể trở thành mục tiêu của các cuộc tấn công mạng.
+
+2.5. Sự khác biệt giữa VPS và Cloud Server
+
+    VPS thông thường: Được tạo ra từ một máy chủ vật lý duy nhất. Nếu máy chủ này hỏng phần cứng, VPS sẽ bị ngưng hoạt động.
+
+    Cloud Server: Được tạo ra từ một cụm nhiều máy chủ (Cluster). Nếu một máy chủ trong cụm gặp sự cố, VPS của bạn sẽ tự động di chuyển sang máy chủ khác để đảm bảo website luôn hoạt động.
+
+3. Server (Máy chủ vật lý riêng / Dedicated Server)
+3.1. Khái niệm thực tế
+
+Server vật lý hay Dedicated Server là một bộ máy tính hoàn chỉnh với phần cứng chuyên dụng, được đặt tại các Datacenter. Khi thuê dịch vụ này, bạn sở hữu toàn bộ tài nguyên của máy đó, không chia sẻ với bất kỳ ai khác. Nếu Hosting là một ngăn tủ, VPS là một căn hộ, thì Server vật lý là một tòa biệt thự riêng biệt hoàn toàn.
+3.2. Đặc điểm nổi bật về phần cứng
+
+    Hiệu suất tuyệt đối: Dữ liệu được xử lý trực tiếp trên phần cứng (không qua lớp ảo hóa như VPS), giúp đạt tốc độ tối đa và độ trễ thấp nhất.
+
+    Khả năng nâng cấp vật lý: Bạn có thể yêu cầu lắp thêm ổ cứng (SSD/HDD/NVMe), cắm thêm thanh RAM hoặc thậm chí là thay thế CPU mạnh hơn tùy theo giới hạn của bo mạch chủ.
+
+    Cấu hình RAID: Hỗ trợ thiết lập RAID (chạy song song nhiều ổ cứng) để tăng tốc độ truy xuất dữ liệu hoặc tự động sao lưu dữ liệu ngay lập tức khi một ổ cứng gặp sự cố.
+
+3.3. Ưu điểm vượt trội
+
+    Tài nguyên khổng lồ: Phù hợp cho các hệ thống cần xử lý hàng triệu dữ liệu mỗi giây, các trang thư
+    ơng mại điện tử lớn hoặc ứng dụng ngân hàng.
+
+    Bảo mật tối đa: Vì là môi trường vật lý đơn nhất, bạn loại bỏ hoàn toàn nguy cơ bị tấn công lây nhiễm từ "hàng xóm" trên cùng server.
+
+    Độ ổn định cao: Máy chủ vật lý chuyên dụng có linh kiện chịu nhiệt và chịu tải cực tốt, có thể hoạt động liên tục nhiều năm mà không cần tắt máy.
+
+3.4. Nhược điểm cần cân nhắc
+
+    Giá thành đắt nhất: Đây là sản phẩm có chi phí thuê hàng tháng cao nhất trong các loại hạ tầng web.
+
+    Thời gian thiết lập: Thường mất thời gian để kỹ thuật viên lắp đặt phần cứng và cài đặt hệ điều hành (không nhanh như việc khởi tạo VPS trong vài phút).
+
+    Khó khăn khi mở rộng tức thì: Nếu muốn nâng cấp RAM, kỹ thuật viên phải tắt máy chủ để cắm thêm linh kiện, gây gián đoạn dịch vụ trong một khoảng thời gian ngắn.
+
+3.5. Đối tượng nên sử dụng
+
+    Các doanh nghiệp lớn có lượng dữ liệu khổng lồ.
+
+    Các nền tảng phát video trực tuyến (Livestream), Game Online hoặc chạy các phần mềm mô phỏng nặng.
+
+    Những dự án yêu cầu tính bảo mật khắt khe và muốn kiểm soát hoàn toàn thiết bị vật lý.
+
+4. Địa chỉ IP (Internet Protocol Address)
+4.1. Khái niệm thực tế
+
+Địa chỉ IP là một dãy số định danh duy nhất cho mỗi thiết bị khi tham gia vào mạng Internet. Hãy tưởng tượng Tên miền (Domain) là tên của bạn, thì Địa chỉ IP chính là Số căn cước công dân hoặc Số điện thoại của bạn. Các máy tính không hiểu tên chữ, chúng chỉ tìm thấy nhau thông qua dãy số IP này.
+4.2. Các loại địa chỉ IP phổ biến
+
+    IPv4: Là phiên bản phổ biến nhất hiện nay, gồm 4 nhóm số cách nhau bởi dấu chấm (Ví dụ: 103.200.23.123). Tuy nhiên, kho số IPv4 đang dần cạn kiệt trên toàn cầu.
+
+    IPv6: Là phiên bản mới để thay thế IPv4, gồm 8 nhóm ký tự cả chữ và số (Ví dụ: 2001:0db8:85a3:0000:0000:8a2e:0370:7334). Nó cung cấp một lượng địa chỉ khổng lồ, gần như không bao giờ hết.
+
+4.3. Phân loại IP theo tính chất sử dụng
+
+    IP Tĩnh (Static IP): Là địa chỉ IP cố định, không bao giờ thay đổi. Đây là loại IP bắt buộc phải có cho Hosting, VPS và Server để đảm bảo người dùng luôn tìm thấy website của bạn tại một địa chỉ duy nhất.
+
+    IP Động (Dynamic IP): Là địa chỉ IP thay đổi mỗi khi bạn khởi động lại thiết bị (thường dùng cho mạng internet gia đình hoặc điện thoại di động). Loại này không phù hợp để chạy website.
+
+4.4. IP Riêng (Dedicated IP) và IP Dùng chung (Shared IP)
+
+    IP Dùng chung (Shared IP): Thường gặp trong dịch vụ Hosting. Một địa chỉ IP được dùng chung cho hàng trăm website khác nhau. Nếu một website trong đó bị "vào danh sách đen" (Blacklist), các website khác dùng chung IP đó cũng có thể bị ảnh hưởng (ví dụ: gửi mail bị vào spam).
+
+    IP Riêng (Dedicated IP): Thường đi kèm với VPS hoặc Server vật lý. Bạn sở hữu riêng một địa chỉ IP. Điều này giúp tăng độ uy tín cho website, hỗ trợ cài đặt SSL tốt hơn và không bị ảnh hưởng bởi hành vi của người khác.
+
+4.5. Vai trò của IP trong hạ tầng Website
+
+    Định vị: Giúp hệ thống DNS biết chính xác phải dẫn người dùng đến máy chủ nào.
+
+    Bảo mật: Bạn có thể thiết lập tường lửa để chỉ cho phép các địa chỉ IP nhất định được phép đăng nhập vào trang quản trị (aaPanel hoặc Server).
+
+    Quản lý: Giúp quản trị viên theo dõi lượt truy cập, phát hiện và chặn các địa chỉ IP có dấu hiệu tấn công website.
+5. Domain (Tên miền)
+5.1. Khái niệm thực tế
+
+Tên miền là địa chỉ định danh của một website trên mạng Internet, giúp con người dễ dàng truy cập thay vì phải ghi nhớ dãy số IP khô khan. Nếu IP là tọa độ chính xác trên bản đồ, thì Domain chính là tên tòa nhà hoặc tên cửa hàng đặt tại tọa độ đó.
+5.2. Cấu trúc của một Tên miền
+
+Một tên miền thường bao gồm hai phần chính cách nhau bởi dấu chấm:
+
+    Phần tên (Label): Là tên thương hiệu bạn tự đặt (ví dụ: vietnix).
+
+    Phần đuôi (Extension/TLD): Là phần mở rộng phía sau (ví dụ: .vn, .com).
+
+5.3. Phân loại Tên miền (TLD)
+
+    Tên miền Quốc tế (gTLD): Các đuôi dùng chung toàn cầu, không thuộc quản lý của riêng quốc gia nào.
+
+        .com: Phổ biến nhất, dành cho các tổ chức thương mại.
+
+        .net: Dành cho các đơn vị về mạng lưới, hạ tầng.
+
+        .org: Dành cho các tổ chức phi lợi nhuận.
+
+    Tên miền Quốc gia (ccTLD): Các đuôi đại diện cho một quốc gia cụ thể.
+
+        .vn: Tên miền cấp cao nhất của Việt Nam.
+
+        .jp: Tên miền của Nhật Bản.
+
+        .us: Tên miền của Mỹ.
+
+5.4. Các cấp độ Tên miền
+
+Để hiểu sâu hơn (như ví dụ .com.vn bạn đã hỏi), chúng ta phân cấp như sau:
+
+    Tên miền cấp 1 (TLD): Chỉ gồm phần đuôi như .vn hoặc .com.
+
+    Tên miền cấp 2:
+
+        Dạng tenmien.vn: tenmien là cấp 2.
+
+        Dạng com.vn: com là cấp 2 (định danh loại hình dưới đuôi quốc gia).
+
+    Tên miền cấp 3: Dạng tenmien.com.vn. Lúc này tenmien nằm ở cấp thứ 3 tính từ phải sang.
+
+    Subdomain (Tên miền phụ): Là phần bạn tự tạo ra từ tên miền chính để phân chia nội dung (ví dụ: khachhang.vietnix.vn).
+
+5.5. Tại sao Tên miền lại quan trọng?
+
+    Bảo vệ thương hiệu: Đăng ký tên miền giúp bạn khẳng định chủ quyền thương hiệu trên Internet, tránh bị người khác mạo danh.
+
+    Tăng độ uy tín: Một email hoặc website đi kèm tên miền riêng (ví dụ: info@vietnix.vn) trông chuyên nghiệp hơn nhiều so với dùng Gmail miễn phí.
+
+    Hỗ trợ SEO: Tên miền ngắn gọn, liên quan đến ngành nghề sẽ giúp website dễ dàng lên top trên các công cụ tìm kiếm như Google.
+
+5.6. Vòng đời của một Tên miền
+
+    Trạng thái tự do: Tên miền chưa có ai mua, bạn có thể đăng ký.
+
+    Trạng thái hoạt động: Sau khi bạn mua, tên miền sẽ thuộc quyền sở hữu của bạn trong thời hạn đã thanh toán (thường từ 1-10 năm).
+
+    Trạng thái chờ gia hạn: Sau khi hết hạn, bạn có một khoảng thời gian ngắn để đóng tiền giữ lại tên miền.
+
+    Trạng thái chờ xóa: Nếu không gia hạn, tên miền sẽ bị khóa và sau đó được giải phóng về trạng thái tự do để người khác có thể mua.
+
+6. Whois (Tra cứu thông tin tên miền)
+6.1. Khái niệm thực tế
+
+Whois không phải là một món hàng bạn mua, mà là một giao thức tra cứu dữ liệu. Nó giống như việc bạn tra cứu sổ hộ khẩu hoặc giấy đăng ký kinh doanh để biết xem ai là chủ sở hữu thực sự của một ngôi nhà hay một mảnh đất (tên miền).
+6.2. Các thông tin quan trọng Whois cung cấp
+
+Khi bạn sử dụng công cụ Whois để kiểm tra một tên miền, bạn sẽ nhận được các thông tin sau:
+
+    Registrar: Tên nhà cung cấp nơi tên miền được đăng ký (ví dụ: Vietnix, mắt bão, PA Việt Nam...).
+
+    Registrant (Chủ sở hữu): Tên cá nhân hoặc tổ chức đứng tên sở hữu tên miền.
+
+    Creation Date (Ngày đăng ký): Ngày tên miền bắt đầu được kích hoạt.
+
+    Expiry Date (Ngày hết hạn): Ngày tên miền sẽ bị thu hồi nếu không được gia hạn.
+
+    Name Servers (NS): Các máy chủ điều hướng tên miền (giúp biết tên miền đang được trỏ về đâu).
+
+    Status (Trạng thái): Cho biết tên miền đang hoạt động bình thường, đang bị khóa, hay đang trong giai đoạn chờ xóa.
+
+6.3. Tại sao cần sử dụng Whois?
+
+    Kiểm tra tính khả dụng: Trước khi mua một cái tên, bạn Whois để xem nó đã có ai mua chưa.
+
+    Xác thực đối tác: Trước khi làm ăn với một website, bạn check Whois để xem web đó đã hoạt động lâu chưa, chủ sở hữu có rõ ràng không.
+
+    Liên hệ mua lại: Nếu bạn thích một tên miền đã có người mua, bạn có thể tìm thông tin liên hệ của chủ sở hữu qua Whois để thương lượng mua lại.
+
+    Nhắc nhở gia hạn: Giúp bạn theo dõi ngày hết hạn của chính tên miền mình đang sở hữu để tránh bị mất tên miền vào tay người khác.
+
+6.4. Dịch vụ Bảo mật Whois (Whois Privacy / ID Protection)
+
+    Vấn đề: Vì Whois công khai thông tin cá nhân (SĐT, Email, Địa chỉ), chủ tên miền thường bị làm phiền bởi các cuộc gọi rác hoặc email quảng cáo.
+
+    Giải pháp: Nhiều nhà cung cấp có dịch vụ "Ẩn thông tin tên miền". Khi đó, thay vì hiện tên bạn, Whois sẽ hiện thông tin của một công ty bảo mật trung gian.
+
+    Lưu ý: Với tên miền quốc gia .vn, thông tin chủ sở hữu thường được quản lý chặt chẽ hơn và một số thông tin cá nhân sẽ được ẩn mặc định theo quy định pháp luật Việt Nam.
+
+6.5. Cách thực hiện Whois
+
+Bạn có thể tra cứu Whois trực tiếp tại:
+
+    Các trang web của nhà cung cấp tên miền (như Vietnix).
+
+    Trang web của VNNIC (đối với tên miền .vn).
+
+    Các trang quốc tế như who.is hoặc internic.net.
+
+7. DNS (Domain Name System - Hệ thống phân giải tên miền)
+7.1. Khái niệm thực tế
+
+DNS là một hệ thống giúp chuyển đổi những tên miền (Domain) dễ nhớ sang những địa chỉ số (IP) mà máy tính có thể hiểu được. Nếu Tên miền là Tên trong danh bạ, và IP là Số điện thoại, thì DNS chính là Hệ thống danh bạ tự động kết nối cuộc gọi của bạn đến đúng người cần gặp.
+
+7.2. Cách thức hoạt động của DNS
+
+Khi bạn nhập vietnix.vn vào trình duyệt, quy trình diễn ra như sau:
+
+    Trình duyệt gửi yêu cầu đến DNS Server để hỏi: "Địa chỉ IP của vietnix.vn là gì?".
+
+    DNS Server tra cứu trong cơ sở dữ liệu và trả về địa chỉ IP (ví dụ: 103.200.23.123).
+
+    Trình duyệt sử dụng IP đó để kết nối trực tiếp đến Máy chủ (Server) đang chứa website.
+
+    Máy chủ phản hồi dữ liệu và website hiển thị lên màn hình của bạn.
+
+7.3. Các loại bản ghi DNS quan trọng (DNS Records)
+
+Để quản trị website, bạn cần biết các loại bản ghi này để cấu hình trong bảng quản lý tên miền:
+
+    A Record (Address): Dùng để trỏ tên miền về một địa chỉ IPv4. Đây là bản ghi quan trọng nhất để chạy website.
+
+    AAAA Record: Dùng để trỏ tên miền về địa chỉ IPv6.
+
+    CNAME Record (Canonical Name): Dùng để trỏ một tên miền phụ sang một tên miền chính (Ví dụ: trỏ www.vietnix.vn về vietnix.vn).
+
+    MX Record (Mail Exchange): Dùng để xác định máy chủ nào sẽ chịu trách nhiệm nhận và gửi Email cho tên miền đó.
+
+    TXT Record (Text): Dùng để lưu trữ các thông tin văn bản, thường dùng để xác minh quyền sở hữu website với Google hoặc cài đặt các tiêu chuẩn bảo mật email.
+
+7.4. Tốc độ cập nhật DNS (DNS Propagation)
+
+    Khi bạn thay đổi các bản ghi DNS (ví dụ trỏ tên miền sang một VPS mới), sự thay đổi này không có tác dụng ngay lập tức trên toàn cầu.
+
+    Quá trình các máy chủ DNS trên thế giới cập nhật thông tin mới gọi là DNS Propagation (Thường mất từ vài phút đến 24 giờ).
+
+7.5. DNS Server phổ biến
+
+Mặc dù mỗi nhà cung cấp tên miền đều có hệ thống DNS riêng, nhưng bạn có thể sử dụng các dịch vụ DNS trung gian để tăng tốc độ và bảo mật:
+
+    Cloudflare DNS: Cực nhanh và có khả năng chống tấn công từ chối dịch vụ (DDoS).
+
+    Google Public DNS: Tốc độ ổn định và phổ biến (IP: 8.8.8.8).
 
