@@ -283,3 +283,85 @@ Mặc dù mỗi nhà cung cấp tên miền đều có hệ thống DNS riêng, 
 
     Google Public DNS: Tốc độ ổn định và phổ biến (IP: 8.8.8.8).
 
+8. Datacenter (Trung tâm dữ liệu)
+8.1. Khái niệm thực tế
+
+Datacenter là một công trình kiến trúc chuyên dụng, nơi tập trung hàng nghìn máy chủ (Server) và các thiết bị lưu trữ dữ liệu. Nếu coi Website là hàng hóa, Server là cái sạp hàng, thì Datacenter chính là cái Trung tâm thương mại khổng lồ cung cấp mọi điều kiện để các sạp hàng đó hoạt động ổn định nhất.
+8.2. Các thành phần bắt buộc trong một Datacenter
+
+Để được gọi là một Datacenter chuyên nghiệp, cơ sở này phải đáp ứng 4 hệ thống cốt lõi:
+
+    Hệ thống nguồn điện (Power): Phải có nguồn điện lưới ổn định, hệ thống pin lưu điện (UPS) để duy trì ngay lập tức khi mất điện và các máy phát điện dự phòng có thể chạy liên tục nhiều ngày.
+
+    Hệ thống làm mát (Cooling): Máy chủ tỏa nhiệt rất lớn. Datacenter phải có máy lạnh công suất cao chạy 24/7 để giữ nhiệt độ ở mức 20-24°C và kiểm soát độ ẩm để linh kiện không bị hỏng.
+
+    Hệ thống mạng (Connectivity): Kết nối với nhiều nhà cung cấp internet lớn (ISP) thông qua cáp quang tốc độ cao. Nếu một nhà mạng bị đứt cáp, hệ thống sẽ tự động chuyển sang nhà mạng khác.
+
+    Hệ thống an ninh và phòng cháy: Bảo vệ bằng camera, quét vân tay. Đặc biệt, hệ thống chữa cháy phải dùng khí sạch (như FM200) để dập lửa mà không làm hỏng máy móc (tuyệt đối không dùng nước).
+
+8.3. Tiêu chuẩn đánh giá (Tier)
+
+Thế giới sử dụng tiêu chuẩn Tier để đánh giá độ tin cậy của Datacenter. Số Tier càng cao thì độ ổn định càng lớn:
+
+    Tier 1: Cơ bản nhất, dễ bị gián đoạn khi bảo trì.
+
+    Tier 2: Có dự phòng một phần về điện và làm mát.
+
+    Tier 3 (Phổ biến nhất): Cho phép bảo trì bất cứ lúc nào mà không cần dừng máy chủ. Độ sẵn sàng lên tới 99.982% (mỗi năm chỉ gián đoạn tối đa khoảng 1.6 giờ).
+
+    Tier 4: Cao cấp nhất, dự phòng gấp đôi cho mọi kịch bản xấu nhất (thiên tai, sự cố lớn).
+
+8.4. Tại sao vị trí Datacenter lại quan trọng?
+
+Vị trí địa lý của Datacenter quyết định Tốc độ truy cập (Latency) của người dùng:
+
+    Nếu khách hàng của bạn ở Việt Nam, bạn nên thuê Server/Hosting tại các Datacenter đặt tại Việt Nam (như của Vietnix tại VNPT hay Viettel) để có tốc độ nhanh nhất.
+
+    Nếu đặt tại Mỹ, tín hiệu phải đi qua cáp quang biển xa xôi, dẫn đến việc load trang sẽ chậm hơn (bị lag).
+
+9. CPU (Central Processing Unit - Bộ vi xử lý)
+9.1. Khái niệm thực tế
+
+CPU được coi là "Bộ não" của máy chủ. Mọi thao tác từ việc khách hàng click vào một bài viết, gửi một đơn hàng đến việc tính toán các hàm mã nguồn đều do CPU đảm nhận.
+9.2. Các chỉ số quyết định hiệu năng
+
+    Số Nhân (Cores): Giống như số lượng "người làm việc" trong một văn phòng. Càng nhiều nhân, máy chủ càng có thể xử lý nhiều yêu cầu đồng thời mà không bị xếp hàng chờ đợi.
+
+    Xung nhịp (Clock Speed - GHz): Giống như "tốc độ làm việc" của mỗi người. Xung nhịp càng cao (ví dụ 3.5GHz so với 2.4GHz) thì mỗi tác vụ đơn lẻ sẽ được hoàn thành nhanh hơn.
+
+    Bộ nhớ đệm (Cache): Là vùng nhớ siêu tốc nằm ngay trong CPU, giúp lưu trữ các lệnh thường dùng để xử lý tức thì, giảm thời gian chờ đợi.
+
+9.3. Đặc điểm của CPU Máy chủ (Server)
+
+    Khác với CPU máy tính để bàn (Intel Core i5, i7), CPU máy chủ (như dòng Intel Xeon hoặc AMD EPYC) được thiết kế để chạy liên tục 24/7 trong nhiều năm.
+
+    Có khả năng xử lý lượng dữ liệu khổng lồ và hỗ trợ các công nghệ bảo mật, ảo hóa tiên tiến mà CPU thông thường không có.
+
+10. RAM (Random Access Memory - Bộ nhớ truy cập ngẫu nhiên)
+10.1. Khái niệm thực tế
+
+RAM là "Mặt bàn làm việc" của máy chủ. Khi bạn mở website, dữ liệu sẽ được lấy từ ổ cứng (trong kho) và đặt lên RAM (mặt bàn) để CPU xử lý.
+10.2. Vai trò đối với Website
+
+    Chịu tải người dùng: RAM càng lớn thì mặt bàn càng rộng, giúp máy chủ tiếp nhận được nhiều khách truy cập cùng lúc mà không bị lag.
+
+    Tốc độ truy xuất: Dữ liệu nằm trên RAM được CPU đọc nhanh hơn hàng nghìn lần so với dữ liệu nằm trên ổ cứng. Vì vậy, các website sử dụng công nghệ bộ nhớ đệm (Caching) trên RAM sẽ load cực nhanh.
+
+10.3. Công nghệ RAM ECC (Error Correction Code)
+
+Đây là đặc điểm nhận dạng quan trọng nhất của RAM máy chủ:
+
+    Khả năng tự sửa lỗi: RAM ECC có thể tự phát hiện và sửa các lỗi dữ liệu nhỏ phát sinh trong quá trình vận hành.
+
+    Độ ổn định: Giúp máy chủ tránh được tình trạng "màn hình xanh" hoặc sập hệ thống bất thình lình, đảm bảo website luôn trực tuyến (Uptime).
+
+Mối quan hệ giữa CPU và RAM:
+
+    CPU là Người làm việc, RAM là Không gian làm việc.
+
+    Nếu CPU mạnh mà RAM ít: Người làm việc nhanh nhưng bàn quá chật, không để được nhiều việc cùng lúc.
+
+    Nếu RAM nhiều mà CPU yếu: Bàn rất rộng nhưng người làm việc quá chậm, khách vẫn phải chờ lâu.
+
+    => Một máy chủ tốt cần có sự cân bằng giữa hai yếu tố này.
+
