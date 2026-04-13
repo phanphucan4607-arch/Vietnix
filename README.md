@@ -491,5 +491,46 @@ VestaCP là một bảng điều khiển mã nguồn mở, miễn phí và cực
 
     Thiếu "App Store": Bạn không thể click chuột để đổi phiên bản PHP dễ dàng như aaPanel mà đôi khi phải can thiệp vào dòng lệnh.
 
+6. Server Control Panel - SCP (Quản trị tinh gọn)
+
+    Điểm mạnh nhất: Cực kỳ đơn giản, tập trung vào việc quản lý các máy chủ từ xa (Remote Server) mà không làm nặng máy.
+
+    Tính năng chính:
+
+        Giao diện quản lý tập trung: Có thể quản lý nhiều VPS cùng lúc trên một màn hình.
+
+        Hỗ trợ cài đặt nhanh các ngăn xếp (Stacks) như LAMP (Linux-Apache-MySQL-PHP) hoặc LEMP (Nginx).
+
+        Theo dõi thông số hệ thống (CPU, RAM, Disk) theo thời gian thực với biểu đồ tối giản.
+
+    Dành cho: Những người cần sự nhanh gọn, không muốn cài các bộ Panel đồ sộ làm tốn tài nguyên VPS.
+
+**III - cPanel & WHM**
+3. cPanel & WHM (Tiêu chuẩn quốc tế)
+3.1. Khái niệm cốt lõi
+
+Đây là bộ đôi phần mềm quản trị máy chủ phổ biến nhất thế giới. Chúng tách biệt rõ ràng hai vai trò:
+
+    WHM (Web Host Manager): Dành cho quản trị viên hệ thống. Dùng để chia tài nguyên, tạo các gói Hosting và quản lý toàn bộ server.
+
+    cPanel: Dành cho chủ website. Dùng để quản lý file, database, email và các tính năng bảo mật của riêng website đó.
+
+3.2. Các ý chính quan trọng
+
+    Tính ổn định & Bảo mật: Là phần mềm có phí cao nên được cập nhật vá lỗi liên tục. Hệ thống bảo mật email (SpamAssassin) và tường lửa của nó thuộc hàng tốt nhất hiện nay.
+
+    Giao diện đầy đủ nhất: Không thiếu bất kỳ tính năng nào, từ quản lý tệp tin, sao lưu (backup) tự động đến thống kê truy cập chi tiết.
+
+    Hệ sinh thái khổng lồ: Vì quá phổ biến, bạn có thể tìm thấy hướng dẫn xử lý cho mọi vấn đề trên Google. Hỗ trợ cực tốt cho WordPress (Toolkit).
+
+    Quản lý Email chuyên nghiệp: Khả năng tạo và quản lý hàng loạt email doanh nghiệp với độ tin cậy cao.
+
+3.3. Nhược điểm (Cần lưu ý)
+
+    Giá bản quyền cao: Phí thuê hàng tháng khá đắt so với các Panel khác.
+
+    Nặng máy: Chiếm khá nhiều RAM và CPU để vận hành các dịch vụ chạy ngầm.
+
+
 
     
