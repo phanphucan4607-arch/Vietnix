@@ -506,6 +506,7 @@ VestaCP là một bảng điều khiển mã nguồn mở, miễn phí và cực
     Dành cho: Những người cần sự nhanh gọn, không muốn cài các bộ Panel đồ sộ làm tốn tài nguyên VPS.
 
 **III - cPanel & WHM**
+
 3. cPanel & WHM (Tiêu chuẩn quốc tế)
 3.1. Khái niệm cốt lõi
 
