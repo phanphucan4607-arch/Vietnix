@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1be467f8-0926-47be-b64c-c2b68979fde0" />
+
 I - **CÁC SẢN PHẨM CƠ BẢN**
 
 1. Hosting (Web Hosting / Shared Hosting)
@@ -557,9 +557,10 @@ Tác dụng chi tiết của CSR file:
    + Bảo mật website: Giúp website chuyển sang giao thức HTTPS, tạo kết nối an toàn, bảo vệ dữ liệu người dùng.
 
  - Gen file CSR và request SSL cho domain `tech.training.vietnix.tech` bằng OpenSSL Trên Linux.
- **Kiểm tra OpenSSL và cái đặt OpenSSL**
- 1. Kiểm tra OpenSSL
- Trước khi thực hiện việc khởi tạo CSR, bạn cần phải kiểm tra OpenSSL đã được cài đặt trên máy chủ của mình chưa.
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5f2a67a-4486-4377-a23f-8fbcc5f1aca5" />
+```text
+Bước 1: Tạo Private Key (.key)
+Chạy lệnh sau để tạo khóa riêng tư (độ dài 2048bit):
+openssl genrsa -out tech.training.vietnix.tech.key 2048
+
 
     
