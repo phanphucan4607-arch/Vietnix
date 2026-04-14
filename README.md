@@ -1,4 +1,4 @@
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1be467f8-0926-47be-b64c-c2b68979fde0" />
 I - **CÁC SẢN PHẨM CƠ BẢN**
 
 1. Hosting (Web Hosting / Shared Hosting)
@@ -533,8 +533,33 @@ VestaCP là một bảng điều khiển mã nguồn mở, miễn phí và cực
     Nặng máy: Chiếm khá nhiều RAM và CPU để vận hành các dịch vụ chạy ngầm.
 
 
-###**SSL**
+**SSL**
+
+```text
 - SSL là gì?
- ```text SSL (là viết tắt của từ Secure Sockets Layer) là giao thức bảo mật Internet được phát triển bởi Netscape vào năm 1995, nhằm mã hóa dữ liệu truyền giữa máy chủ và trình duyệt để đảm bảo tính riêng tư, xác thực và toàn vẹn thông tin. Ngày nay, SSL đã được nâng cấp thành chuẩn TLS (Transport Layer Security), nhưng khái niệm SSL vẫn được sử dụng phổ biến để chỉ chứng chỉ bảo mật của website. Khi một trang web cài đặt SSL/TLS, địa chỉ của nó sẽ hiển thị HTTPS thay vì HTTP, cho thấy kết nối an toàn đã được kích hoạt.
-SSL là giao thức bảo mật Internet được phát triển bởi Netscape vào năm 1995...
+Là giao thức bảo mật internet được phát triển bởi Netscape vào năm 1995, nhằm mã hóa dữ liệu truyền giữa máy chủ và trình duyệt để đảm bảo tính riêng tư, xác thực và toàn vẹn thông tin.
+
+- Có bao nhiêu cách xác thực SSL?
+Tại Vietnix, việc xác thực chứng chỉ SSL (đặc biệt là dòng DV - Domain Validation phổ biến) thường bao gồm 3 phương thức chính để xác minh quyền sở hữu tên miền:
+  + Xác thực qua DNS (CNAME): Thêm bản ghi CNAME vào cấu hình DNS của tên miền.
+  + Xác thực qua Email (Email-based): Sử dụng email quản trị tên miền (như admin@domain.com) để xác nhận.
+  + Xác thực qua File (HTTP/HTTPS): Tải file xác thực do Vietnix cung cấp lên thư mục gốc của website.
+
+
+```text
+ - CSR file dùng để làm gì?
+File CSR (Certificate Signing Request) tại Vietnix là một đoạn mã hóa chứa thông tin tên miền và doanh nghiệp, được tạo ra từ server để gửi cho nhà cung cấp chứng chỉ SSL. Mục đích chính là dùng để đăng ký chứng chỉ SSL nhằm xác thực website và mã hóa dữ liệu truyền tải, đảm bảo an toàn thông tin. 
+Tác dụng chi tiết của CSR file:
+
+   + Đăng ký SSL: Là thành phần bắt buộc khi mua hoặc gia hạn các loại chứng chỉ SSL (như Comodo, DigiCert, Sectigo...) để xác thực quyền sở hữu tên miền.
+   + Mã hóa thông tin: Chứa các thông tin quan trọng như tên miền (Common Name), tổ chức, địa phương, quốc gia... để nhà cung cấp SSL xác nhận.
+   + Tạo Private Key: Khi tạo CSR, hệ thống thường tạo ra một cặp khóa gồm CSR và Private Key. Private Key này được giữ bí mật trên máy chủ để cài đặt SSL hoàn tất.
+   + Bảo mật website: Giúp website chuyển sang giao thức HTTPS, tạo kết nối an toàn, bảo vệ dữ liệu người dùng.
+
+ - Gen file CSR và request SSL cho domain `tech.training.vietnix.tech` bằng OpenSSL Trên Linux.
+ **Kiểm tra OpenSSL và cái đặt OpenSSL**
+ 1. Kiểm tra OpenSSL
+ Trước khi thực hiện việc khởi tạo CSR, bạn cần phải kiểm tra OpenSSL đã được cài đặt trên máy chủ của mình chưa.
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5f2a67a-4486-4377-a23f-8fbcc5f1aca5" />
+
     
