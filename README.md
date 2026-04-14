@@ -533,5 +533,8 @@ VestaCP là một bảng điều khiển mã nguồn mở, miễn phí và cực
     Nặng máy: Chiếm khá nhiều RAM và CPU để vận hành các dịch vụ chạy ngầm.
 
 
-
+**SSL**
+- SSL là gì?
+  SSL (là viết tắt của từ Secure Sockets Layer) là giao thức bảo mật Internet được phát triển bởi Netscape vào năm 1995, nhằm mã hóa dữ liệu truyền giữa máy chủ và trình duyệt để đảm bảo tính riêng tư, xác thực và toàn vẹn thông tin. Ngày nay, SSL đã được nâng cấp thành chuẩn TLS (Transport Layer Security), nhưng khái niệm SSL vẫn được sử dụng phổ biến để chỉ chứng chỉ bảo mật của website. Khi một trang web cài đặt SSL/TLS, địa chỉ của nó sẽ hiển thị HTTPS thay vì HTTP, cho thấy kết nối an toàn đã được kích hoạt.
+SSL là giao thức bảo mật Internet được phát triển bởi Netscape vào năm 1995
     
