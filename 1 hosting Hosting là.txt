@@ -1,0 +1,57 @@
+1. hosting
+- Hosting là 
+Hosting là dịch vụ cung cấp cơ sở hạ tầng và không gian lưu trữ trên các máy chủ, cho phép cá nhân hoặc tổ chức xuất bản website và các ứng dụng trực tuyến lên môi trường Internet.
+
+- Cách thức hoạt động của hosting 
+
+ + Lưu trữ dữ liệu: Bạn tải mã nguồn, hình ảnh và cơ sở dữ liệu của website lên máy chủ (Server) của nhà cung cấp.
+
++ Tiếp nhận yêu cầu: Khi người dùng nhập tên miền vào trình duyệt, một yêu cầu sẽ được gửi đến địa chỉ IP của máy chủ hosting thông qua hệ thống DNS.
+
++ Xử lý dữ liệu: Phần mềm máy chủ (như Apache hoặc Nginx) tìm kiếm các tệp tin mà người dùng yêu cầu và thực thi các kịch bản (PHP, Python...).
+
++ Phản hồi: Máy chủ gửi dữ liệu đã xử lý ngược lại trình duyệt của người dùng dưới dạng mã HTML/CSS/JS.
+
++ Hiển thị: Trình duyệt đọc mã này và hiển thị thành giao diện website hoàn chỉnh.
+
+- Các tính năng quan trọng của hosting 
++ lưu trữ tài nguyên số
++ quản lý cơ sở dữ liệu 
++ cấu hình doamin và dns
++ hệ thống mail theo doamin 
++ bảo mật và mã hóa dữ liệu 
++ giao thữ truyền tải ftp 
+
+- Vai trò của hosting đối với doanh nghiệp 
++ support 24/7 
++ tốc độ cao 
++ bảo mật 
++ ổn định(SEO)
++ tối ưu chi phí 
+
+- các loại hình hosting phổ biến 
++ Shared hosting: nhiều web cùng nằm trên 1 máy chủ, dùng chung 1 tài nguyên 
+  Phạm vi: như ở ký túc xá 
++ vps hosting: bản chất một máy chủ vật lý chia thành nhiều chủ ảo riêng lẻ 
+  Phạm vi: căn hộ chung cư
++ dedicated server: thuê 1 máy chỉ quản lý riêng không chia sẻ bát kỳ ai      
+  Phạm vi: một mình mình dùng 
++ cloud: là công nghệ lưu trữ dữ liệu trên điện toán đám mây 
+  
+- các loại hình hosting chuyên biệt 
+
++ WordPress: nó là moọt mã nguồn mở để sản xuất bản các blog, trang web được viết bằng ngôn ngữ lập trình PHP và cơ sở dữ liệu MySQL
++ SEO: là dịch vụ cung cấp nhiều địa chỉ ip khác nhau trên cùng một tài khoản 
++ NVMe: hosting này sử dụng ổ cứng có tốc độ đọc/ghi nhanh hơn so với SSD
++ reseller: loại hình cho phép người dùng mua một lượng dung lượng lớn tài nguyên máy tủ đến từ nhà cung cấp 
+==> Đối với windows thì lựa chọn bắt buộc cho website chạy trên nền tảng .NET hoặc là MSSQL, trong khi đó linux hosting hỗ trợ tối ưu cho PHP và MySQL 
+
+- Các kỹ thông số kỹ thuật quan trọng 
++ Dung lượng lưu trữ: là không gian lưu trữ data trên ở cứng máy chủ 
++ Băng thông: dữ liệu được truyền tải qua lại giữa website và người dùng trong một đơn vị thời gian 
++ cấu hình phần cứng máy chủ
++ vị trí đặt máy chủ: nếu khách hàng ở VN hãy ưu tiên chọn hosting có máy chủ đặt trong nước hoặc các khu vực lân cận 
++ TThời gian hoạt động
++ hệ điều hành 
++ khả năng tích hơp tên miền
+
